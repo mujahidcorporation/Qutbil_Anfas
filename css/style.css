@@ -148,122 +148,74 @@ nav ul li a:hover {
   background-color: #eaf6e2;
 }
 
-/* === NEWS === */
+/* === NEWS (Desktop) === */
 .news-item {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 30px;
+  justify-content: center;
+  gap: 20px;
   margin-bottom: 40px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
-  flex-wrap: wrap;
+  text-align: right;
 }
 
-.news-item img,
-.news-item iframe {
-  max-width: 100%;
+/* Gambar tetap di kiri */
+.news-item img {
+  width: 200px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  display: block;
+  flex-shrink: 0;
 }
 
-.news-item p {
+/* Teks berada di kanan */
+.news-item-content {
   flex: 1;
-  font-size: 2rem;
+  text-align: right;
+}
+
+/* Teks di dalam paragraf */
+.news-item-content p {
+  font-size: 1.3rem;
+  margin: 10px 0;
   word-break: break-word;
 }
 
-/* === LTR SECTION === */
-.ltr-content {
-  direction: ltr;
-  text-align: left;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* === FOOTER === */
-footer {
-  background-color: #116530;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 16px;
-  margin-top: auto;
+/* Iframe seperti peta atau video */
+.news-item iframe {
   width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
-.footer-content p {
-  margin: 5px 0;
-}
-
-/* === RESPONSIVE: MOBILE === */
+/* === RESPONSIVE: HP (Stacked Column) === */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li a {
-    padding: 12px;
-    text-align: center;
-  }
-
-  h1, h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  main {
-    padding: 20px 10px;
-  }
-
   .news-item {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 15px;
   }
 
-  .news-item p {
+  .news-item img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .news-item-content {
+    text-align: center;
+  }
+
+  .news-item-content p {
     font-size: 1rem;
-    padding: 10px;
   }
 
   .news-item iframe {
     height: 200px;
   }
-
-  .accordion-title {
-    font-size: 1rem;
-    padding: 15px;
-  }
-
-  .accordion-content {
-    font-size: 1.2rem;
-    padding: 12px;
-  }
-
-  .running-text {
-    font-size: 18px;
-  }
-
-  footer {
-    font-size: 14px;
-    padding: 15px;
-  }
-
-  #pdf-link-container a {
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .line {
-    font-size: 20px;
-  }
 }
+
