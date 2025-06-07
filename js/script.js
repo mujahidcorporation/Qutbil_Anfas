@@ -54,37 +54,3 @@ const container = document.getElementById("berita-container");
     container.appendChild(el);
   }
 );
-
-document.addEventListener("DOMContentLoaded", () => {
-    fetch('kitab-kuning.json')  // Ambil data dari file JSON
-        .then(response => response.json())  // Ubah data JSON menjadi objek JavaScript
-        .then(data => {
-            const matanContainer = document.getElementById('matan-container');
-
-            if (matanContainer) {
-                data.forEach(kitab => {
-                    // Membuat elemen artikel baru untuk setiap entri di JSON
-                    const article = document.createElement('article');
-                    article.className = 'article-item';
-
-                    // Menambahkan judul artikel
-                    const title = document.createElement('h2');
-                    title.textContent = kitab.judul;
-                    article.appendChild(title);
-
-                    // Menambahkan teks matan (teks Arab)
-                    const arabicText = document.createElement('p');
-                    arabicText.textContent = kitab.matan;
-                    arabicText.dir = "rtl";  // Teks Arab perlu disusun dari kanan ke kiri
-                    arabicText.className = 'arabic-text';
-                    article.appendChild(arabicText);
-
-                  // Menambahkan artikel ke dalam container
-                    matanContainer.appendChild(article);
-                });
-            }
-        })
-        .catch(error => {
-            console.error("Gagal memuat kitab:", error);
-        });
-});
