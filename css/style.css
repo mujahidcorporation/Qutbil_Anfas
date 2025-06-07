@@ -149,31 +149,3 @@ nav ul li a:hover {
 }
 /* === menu Kitab === */
 /* Main */
-main {
-  padding: 20px;
-}
-
-.kitab-card {
-  background-color: white;
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  overflow-wrap: break-word;
-}
-
-.kitab-card h3 {
-  margin: 0;
-  cursor: pointer;
-  color: #00785b;
-}
-
-.kitab-text {
-  display: none;
-  margin-top: 10px;
-  font-size: 1.1em;
-  direction: rtl;
-  text-align: right;
-  overflow-wrap: break-word;
-}
-
