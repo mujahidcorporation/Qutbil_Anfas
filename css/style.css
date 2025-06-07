@@ -1,14 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+/* RESET & DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Amiri', serif;
+  background: linear-gradient(to top, #f5fbe9, #ffffff);
+  direction: rtl;
+  color: #333;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+/* MAIN WRAPPER */
+main {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #116530;
+  font-size: 1.5rem;
+  word-break: break-word;
+}
+
 /* === NAVIGASI === */
 nav {
   background-color: #116530;
   direction: ltr;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow-x: auto; /* supaya scroll horizontal muncul kalau overflow */
 }
 
 nav ul {
   display: flex;
+  flex-wrap: nowrap; /* jangan wrap supaya tetap horizontal */
   list-style: none;
-  justify-content: center;
+  justify-content: flex-start; /* rata kiri */
+  padding: 0 10px; /* padding kanan kiri agar tidak nempel */
+  margin: 0;
+  gap: 10px; /* jarak antar menu */
+  white-space: nowrap; /* mencegah teks membungkus */
+}
+
+nav ul li {
+  flex-shrink: 0; /* jangan kecil */
 }
 
 nav ul li a {
@@ -18,24 +67,27 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
+  white-space: nowrap;
 }
 
 nav ul li a:hover {
   background-color: #0d4722;
 }
 
-/*==== HOME====*/
+/* === LOGO HEADER === */
 .header-with-logo {
   text-align: center;
   margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .header-with-logo .logo {
-  width: 120px; /* Atur sesuai ukuran logo Anda */
+  width: 120px;
   height: auto;
   margin-bottom: 10px;
 }
 
+/* === RUNNING TEXT === */
 .running-text {
   width: 100%;
   overflow: hidden;
@@ -58,12 +110,8 @@ nav ul li a:hover {
 }
 
 @keyframes scrollText {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* === ACCORDION === */
@@ -77,7 +125,7 @@ nav ul li a:hover {
 
 .accordion-title {
   background-color: #eaf6e2;
-  padding: 20px 20px;
+  padding: 20px;
   cursor: pointer;
   font-weight: bold;
   color: #116530;
@@ -99,11 +147,11 @@ nav ul li a:hover {
   display: block;
 }
 
-
-/* === BARIS ARAB SELANG-SELING === */
+/* === BARIS ARAB === */
 .line {
   margin: 8px 0;
   font-size: 25px;
+  max-width: 100%;
 }
 
 .line.right {
@@ -116,91 +164,153 @@ nav ul li a:hover {
   color: #2c3e50;
 }
 
-
-/* === BERITA === */
-.news-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.news-item img {
-  width: 200px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.news-item-content {
-  flex: 1;
-}
-
-.news-item-content p {
-  margin-bottom: 10px;
-}
-
-.news-item iframe {
+/* === KONTEN PDF === */
+#pdf-link-container {
   width: 100%;
-  height: 200px;
-  border: 0;
-  border-radius: 8px;
-}
-/* === Kitab === */
-main {
-  margin-top: 30px;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
 #pdf-link-container a {
-  color: blue;
+  display: block;
+  margin: 10px 0;
+  color: #116530;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 16px;
+  border: 2px solid #cce1c1;
+  background-color: #f9fff3;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  word-break: break-word;
 }
-/* === RESPONSIVE DESIGN === */
+
+#pdf-link-container a:hover {
+  background-color: #eaf6e2;
+}
+
+/* === NEWS === */
+.news-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.news-item img,
+.news-item iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-item p {
+  flex: 1;
+  font-size: 2rem;
+  word-break: break-word;
+}
+
+/* === LTR SECTION === */
+.ltr-content {
+  direction: ltr;
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #116530;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+/* === RESPONSIVE: MOBILE === */
 @media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* Navbar tetap horizontal dan bisa scroll */
   nav ul {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0 10px;
+    gap: 10px;
   }
 
   nav ul li a {
-    padding: 12px;
+    padding: 12px 16px;
+    white-space: nowrap;
     text-align: center;
+    font-size: 14px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  .news-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .news-item p {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .news-item iframe {
+    height: 200px;
+  }
+
+  .accordion-title {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .accordion-content {
+    font-size: 1.2rem;
+    padding: 12px;
   }
 
   .running-text {
     font-size: 18px;
   }
 
-  .accordion-title {
-    font-size: 18px;
+  footer {
+    font-size: 14px;
     padding: 15px;
   }
 
-  .accordion-content {
-    font-size: 22px;
-    padding: 12px;
-  }
-
-  .news-item {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .news-item img {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .news-item iframe {
-    height: 180px;
-  }
-
-  main {
-    padding: 0 15px;
-  }
-
   #pdf-link-container a {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 10px;
+  }
+
+  .line {
+    font-size: 20px;
   }
 }
