@@ -211,6 +211,6 @@ const berita = [
     judul: "Majelis Qutbil Anfas Kajian Rurin Malem Rabu",
     gambar: "assets/img/NGJ1.jpeg",
     deskripsi: "Majelis Qutbil Anfas mengadakan kegiatan Kajian Kitab Nashoihul",
-    peta: "https://www.google.com/maps/embed?pb=!1m18!..." // ganti dengan link Google Maps Embed yang valid
+    peta: "https://maps.app.goo.gl/YE4ZzCVgw23fyZ7o8" // ganti dengan link Google Maps Embed yang valid
   }
 ];
