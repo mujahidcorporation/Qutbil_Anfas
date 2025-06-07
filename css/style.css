@@ -1,7 +1,7 @@
 /* === NAVIGASI === */
 nav {
   background-color: #116530;
-  direction: ltr; /* Tetap LTR agar urutan menu benar */
+  direction: ltr;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
@@ -9,14 +9,16 @@ nav {
 nav ul {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   justify-content: center;
+  align-items: center;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 nav ul li {
-  flex-shrink: 0;
+  flex: 1 0 auto;
+  text-align: center;
 }
 
 nav ul li a {
@@ -29,28 +31,56 @@ nav ul li a {
   white-space: nowrap;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+/* Hover effect */
+nav ul li a:hover {
   background-color: #0d4722;
 }
 
+/* Aktif menu */
+nav ul li a.active {
+  background-color: #0d4722;
+  border-bottom: 3px solid #fff;
+}
 
-/* === HEADER LOGO === */
+/* === RESPONSIVE UNTUK HP / TABLET === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav ul li:first-child a {
+    border-top: none;
+  }
+
+  nav ul li a.active {
+    border-left: 4px solid #fff;
+    border-bottom: none;
+  }
+}
+
+
+/*==== HOME====*/
 .header-with-logo {
   text-align: center;
-  margin: 20px auto;
-  max-width: 100%;
+  margin-bottom: 20px;
 }
 
 .header-with-logo .logo {
-  width: 120px;
+  width: 120px; /* Atur sesuai ukuran logo Anda */
   height: auto;
-  display: block;
-  margin: 0 auto 10px auto;
+  margin-bottom: 10px;
 }
 
-
-/* === RUNNING TEXT === */
 .running-text {
   width: 100%;
   overflow: hidden;
@@ -64,8 +94,6 @@ nav ul li a.active {
   font-size: 25px;
   border-top: 2px solid #cce1c1;
   border-bottom: 2px solid #cce1c1;
-  text-align: right;
-  direction: rtl;
 }
 
 .running-text span {
@@ -80,29 +108,6 @@ nav ul li a.active {
   }
   100% {
     transform: translateX(-100%);
-  }
-}
-
-
-/* === RESPONSIVE NAV & HOME === */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li a {
-    padding: 12px;
-    text-align: center;
-  }
-
-  .running-text {
-    font-size: 18px;
-    padding: 8px 0;
-  }
-
-  .header-with-logo .logo {
-    width: 100px;
   }
 }
 
