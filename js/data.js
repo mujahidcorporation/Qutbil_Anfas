@@ -460,6 +460,13 @@ const berita = [
     alamat: {teks: "Jl. Masjid Al Muflihun No.2, RT.5/RW.10, Bintaro, Kec. Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12330",
     link: "https://maps.app.goo.gl/YE4ZzCVgw23fyZ7o8"
 }
+    {
+    judul: "Majelis Qutbil Anfas Kajian Rurin Malem minggu",
+    gambar: "assets/img/NGJ2.jpeg",
+    deskripsi: "Majelis Qutbil Anfas mengadakan kegiatan zikir bersama",
+    alamat: {teks: "Jl. Masjid Al Muflihun No.2, RT.5/RW.10, Bintaro, Kec. Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12330",
+    link: "https://maps.app.goo.gl/YE4ZzCVgw23fyZ7o8"
+}
 
   }
 ];
