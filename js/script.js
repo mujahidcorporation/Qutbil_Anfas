@@ -54,3 +54,18 @@ const container = document.getElementById("berita-container");
     container.appendChild(el);
   }
 );
+// kitab-script.js
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("pdf-link-container");
+
+  daftarPDF.forEach(pdf => {
+    const link = document.createElement("a");
+    link.href = pdf.url;
+    link.textContent = pdf.judul;
+    link.target = "_blank";
+    link.style.display = "block";
+    link.style.marginBottom = "10px";
+
+    container.appendChild(link);
+  });
+});
