@@ -47,7 +47,7 @@ const container = document.getElementById("berita-container");
       <img src="${item.gambar}" alt="${item.judul}">
       <div class="news-item-content">
         <p>${item.deskripsi}</p>
-        <iframe src="${item.peta}" allowfullscreen></iframe>
+        <p><strong>Alamat:</strong> <a href="${item.alamat.link}" target="_blank">${item.alamat.teks}</a></p>
       </div>
     `;
 
