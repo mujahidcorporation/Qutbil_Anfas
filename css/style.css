@@ -1,26 +1,22 @@
-
 /* === NAVIGASI === */
 nav {
   background-color: #116530;
   direction: ltr;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  overflow-x: auto; /* supaya scroll horizontal muncul kalau overflow */
 }
 
 nav ul {
   display: flex;
-  flex-wrap: nowrap; /* jangan wrap supaya tetap horizontal */
+  flex-wrap: wrap;
   list-style: none;
-  justify-content: flex-start; /* rata kiri */
-  padding: 0 10px; /* padding kanan kiri agar tidak nempel */
+  justify-content: center;
+  padding: 0;
   margin: 0;
-  gap: 10px; /* jarak antar menu */
-  white-space: nowrap; /* mencegah teks membungkus */
 }
 
 nav ul li {
-  flex-shrink: 0; /* jangan kecil */
+  flex-shrink: 0;
 }
 
 nav ul li a {
@@ -208,20 +204,14 @@ footer {
     padding: 0 10px;
   }
 
-  /* Navbar tetap horizontal dan bisa scroll */
   nav ul {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding: 0 10px;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
   nav ul li a {
-    padding: 12px 16px;
-    white-space: nowrap;
+    padding: 12px;
     text-align: center;
-    font-size: 14px;
   }
 
   h1, h2 {
