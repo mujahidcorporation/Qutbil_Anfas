@@ -147,3 +147,9 @@ nav ul li a:hover {
   border: 0;
   border-radius: 8px;
 }
+/* === menu Kitab === */
+main {
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 1rem;
+}
