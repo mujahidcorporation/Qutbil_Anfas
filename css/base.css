@@ -1,184 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
-/* RESET & DASAR */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+body {
   font-family: 'Amiri', serif;
   background: linear-gradient(to top, #f5fbe9, #ffffff);
   direction: rtl;
   color: #333;
   line-height: 1.7;
-  font-size: 18px;
 }
 
-/* MAIN WRAPPER */
 main {
   padding: 30px 20px;
-  max-width: 900px;
-  margin: auto;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 h1, h2 {
   text-align: center;
   margin-bottom: 40px;
   color: #116530;
-  font-size: 1.5rem;
+  font-size: 1,5rem;
 }
 
-/* === NAVIGASI === */
-nav {
-  background-color: #116530;
+/* Konten dengan arah LTR */
+.ltr-content {
   direction: ltr;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: center;
-}
-
-nav ul li a {
-  display: block;
-  padding: 14px 20px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #0d4722;
-}
-
-/* === LOGO HEADER === */
-.header-with-logo {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header-with-logo .logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-/* === RUNNING TEXT === */
-.running-text {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  margin-top: 10px;
-  color: #116530;
-  font-weight: bold;
-  background-color: #f1f8ef;
-  padding: 10px 0;
-  font-size: 25px;
-  border-top: 2px solid #cce1c1;
-  border-bottom: 2px solid #cce1c1;
-}
-
-.running-text span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scrollText 15s linear infinite;
-}
-
-@keyframes scrollText {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* === ACCORDION === */
-.accordion {
-  margin-bottom: 20px;
-  border: 2px solid #cce1c1;
-  border-radius: 10px;
-  background-color: #f9fff3;
-  overflow: hidden;
-}
-
-.accordion-title {
-  background-color: #eaf6e2;
-  padding: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #116530;
-  transition: background 0.2s ease;
-}
-
-.accordion-title:hover {
-  background-color: #d3ebc5;
-}
-
-.accordion-content {
-  display: none;
-  padding: 15px 20px;
-  font-size: 30px;
-  color: #333;
-}
-
-.accordion-content.active {
-  display: block;
-}
-
-/* === BARIS ARAB === */
-.line {
-  margin: 8px 0;
-  font-size: 25px;
-}
-
-.line.right {
-  text-align: right;
-  color: #2c3e50;
-}
-
-.line.left {
   text-align: left;
-  color: #2c3e50;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* === KONTEN PDF === */
-#pdf-link-container {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 10px;
-}
-
-#pdf-link-container a {
-  display: block;
-  margin: 10px 0;
-  color: #116530;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 12px 16px;
-  border: 2px solid #cce1c1;
-  background-color: #f9fff3;
-  border-radius: 8px;
-  transition: background-color 0.2s;
-}
-
-#pdf-link-container a:hover {
-  background-color: #eaf6e2;
-}
-
-/* === NEWS === */
+/* News Item Layout */
 .news-item {
   display: flex;
   flex-direction: row;
@@ -189,28 +43,30 @@ nav ul li a:hover {
   padding-bottom: 20px;
 }
 
-.news-item img,
-.news-item iframe {
-  max-width: 100%;
+/* Gambar */
+.news-item img {
+  width: 250px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  display: block;
 }
 
+/* Teks */
 .news-item p {
   flex: 1;
   font-size: 2rem;
 }
 
-/* === LTR SECTION === */
-.ltr-content {
-  direction: ltr;
-  text-align: left;
-  font-family: 'Segoe UI', sans-serif;
+/* Iframe Peta */
+.news-item iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  border: 0;
+  margin-top: 15px;
 }
 
-/* === FOOTER === */
+/* Footer */
 footer {
   background-color: #116530;
   color: white;
@@ -224,37 +80,17 @@ footer {
   margin: 5px 0;
 }
 
-/* === RESPONSIVE: MOBILE === */
+/* ✅ Responsive: Mobile Layout */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li a {
-    padding: 12px;
-    text-align: center;
-  }
-
-  h1, h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  main {
-    padding: 20px 10px;
-  }
-
   .news-item {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 15px;
+  }
+
+  .news-item img {
+    width: 100%;
+    max-width: 100%;
   }
 
   .news-item p {
@@ -262,31 +98,12 @@ footer {
     padding: 10px;
   }
 
+  h1, h2 {
+    font-size: 2rem;
+  }
+
   .news-item iframe {
+    width: 100%;
     height: 200px;
-  }
-
-  .accordion-title {
-    font-size: 1rem;
-    padding: 15px;
-  }
-
-  .accordion-content {
-    font-size: 1.2rem;
-    padding: 12px;
-  }
-
-  .running-text {
-    font-size: 18px;
-  }
-
-  footer {
-    font-size: 14px;
-    padding: 15px;
-  }
-
-  #pdf-link-container a {
-    font-size: 1rem;
-    padding: 10px;
   }
 }
