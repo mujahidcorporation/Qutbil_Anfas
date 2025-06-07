@@ -1,11 +1,10 @@
-index.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Majelis Qutbil Anfas - Beranda</title>
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kumpulan Kitab - Majelis Qutbil Anfas</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -13,7 +12,7 @@ index.html<!DOCTYPE html>
   <nav>
     <ul>
       <li><a href="index.html">Beranda</a></li>
-      <li><a href="kitab.html">Kumpulan Kitab</a></li>
+      <li><a href="kitab.html" class="active">Kumpulan Kitab</a></li>
       <li><a href="sholawat.html">Sholawat</a></li>
       <li><a href="nadzom.html">Nadzom</a></li>
       <li><a href="berita.html">Berita</a></li>
@@ -22,15 +21,20 @@ index.html<!DOCTYPE html>
   </nav>
 
   <!-- Konten -->
-  
-  
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Majelis Qutbil Anfas. All rights reserved.</p>
+  <main>
+    <h1 style="text-align: center; color: #116530;">Daftar Kitab PDF</h1>
+
+    <div id="pdf-link-container" style="margin: 30px auto; max-width: 600px;">
+      <!-- Daftar PDF akan dimuat dari JavaScript -->
     </div>
+  </main>
+
+  <!-- Footer -->
+  <footer style="text-align: center; margin-top: 50px; padding: 20px 0; background-color: #f1f8ef; border-top: 1px solid #cce1c1;">
+    <p>&copy; 2025 Majelis Qutbil Anfas. All rights reserved.</p>
   </footer>
-<script src="js/data.js"></script>
-  <script src="js/script.js"></script>
+
+  <script src="js/data.js"></script>
+  <script src="js/kitab-script.js"></script>
 </body>
 </html>
