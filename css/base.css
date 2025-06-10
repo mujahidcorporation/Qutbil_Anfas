@@ -62,12 +62,12 @@ header nav a:focus {
 /* HP */
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.4em;
+    font-size: 2em;
   }
 
   header nav a {
     padding: 10px 12px;
-    font-size: 0.95em;
+    font-size: 2em;
   }
 }
 
@@ -103,6 +103,6 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-  font-size: 0.9em;
+  font-size: 1em;
   margin-top: 30px;
 }
