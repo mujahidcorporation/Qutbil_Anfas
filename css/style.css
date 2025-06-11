@@ -19,19 +19,19 @@ h2 {
 }
 
 .logo-majelis {
-  width: 150px;
+  width: 300px;
   height: auto;
   margin-bottom: 20px;
 }
 
 .halaman-utama h2 {
-  font-size: 2.4em;
+  font-size: 2.5em;
   color: #00695c;
   margin-bottom: 15px;
 }
 
 .marquee {
-  font-size: 2em;
+  font-size: 3em;
   color: #004d40;
   font-weight: bold;
   background: #e0f2f1;
@@ -86,8 +86,8 @@ h2 {
 }
 
 .berita-img {
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 5px;
   margin-right: 15px;
@@ -95,7 +95,7 @@ h2 {
 
 .berita-info h3 {
   margin: 0 0 5px 0;
-  font-size: 1.1em;
+  font-size: 2em;
   color: #00695c;
 }
 
