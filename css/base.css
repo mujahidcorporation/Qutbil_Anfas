@@ -44,7 +44,7 @@ header nav a {
   color: #a5d6a7;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1em;
+  font-size: 2em;
   padding: 8px 15px;
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -67,7 +67,7 @@ header nav a:focus {
 
   header nav a {
     padding: 10px 12px;
-    font-size: 2em;
+    font-size: 3em;
   }
 }
 
@@ -83,7 +83,7 @@ header nav a:focus {
 
   header h1 {
     margin-bottom: 0;
-    font-size: 2em;
+    font-size: 3em;
   }
 
   header nav {
@@ -92,7 +92,7 @@ header nav a:focus {
   }
 
   header nav a {
-    font-size: 1.1em;
+    font-size: 2em;
     padding: 10px 18px;
   }
 }
@@ -103,6 +103,6 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-  font-size: 1em;
+  font-size: 2em;
   margin-top: 30px;
 }
